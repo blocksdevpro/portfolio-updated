@@ -1,8 +1,11 @@
 import { ResumeData } from "@/types/resume";
 
-export const RESUME_DATA : ResumeData = {
+export const RESUME_DATA: ResumeData = {
   name: "Uttam Kumbhakar",
   title: "Junior Backend Developer",
+  avatar:
+    "https://40ar4rk0hv.ufs.sh/f/9Pu2ZyQIW8BFkxw2CxtHqGNu7tCzy62FwhZjiv9UlmR30p15",
+
   location: "Dhanbad (JH), India",
   email: "mail@blocksdev.pro",
   website: "https://blocksdev.pro",

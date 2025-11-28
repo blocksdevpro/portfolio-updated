@@ -1,8 +1,10 @@
 "use client";
 
-import { ModeSwitcher } from "@/components/mode-switcher";
+import { About } from "@/components/sections/about";
 import { Header } from "@/components/sections/header";
 import { Hero } from "@/components/sections/hero";
+import { Socials } from "@/components/sections/socials";
+import { TechStack } from "@/components/sections/tech-stack";
 import { RESUME_DATA } from "@/constants/resume";
 
 export default function Home() {
@@ -14,6 +16,9 @@ export default function Home() {
       <main className="relative z-10 w-full max-w-[700px] space-y-12">
         <Header />
         <Hero data={RESUME_DATA} />
+        <Socials socials={RESUME_DATA.socials} />
+        <About data={RESUME_DATA} />
+        <TechStack skills={RESUME_DATA.skills} />
       </main>
     </>
   );

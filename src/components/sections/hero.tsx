@@ -1,4 +1,5 @@
-import React, { useEffect, useMemo, useState } from "react";
+import React, { useEffect, useState } from "react";
+import Image from "next/image";
 import {
   Verified,
   MapPin,
@@ -6,18 +7,15 @@ import {
   Clock,
   Mail,
   User,
-  Code2,
   Terminal,
 } from "lucide-react";
 import { ResumeData } from "@/types/resume";
-
 
 interface HeroProps {
   data: ResumeData;
 }
 
 export const Hero: React.FC<HeroProps> = ({ data }) => {
-
   const [time, setTime] = useState(() =>
     new Date().toLocaleTimeString("en-US", {
       hour: "2-digit",
@@ -40,17 +38,6 @@ export const Hero: React.FC<HeroProps> = ({ data }) => {
     const interval = setInterval(updateTime, 1000);
     return () => clearInterval(interval);
   }, []);
-
-  // Memoize static computed values
-//   const avatarUrl = useMemo(
-//     () =>
-//       `https://ui-avatars.com/api/?name=${encodeURIComponent(
-//         data.name ?? ""
-//       )}&background=0D8ABC&color=fff&size=128`,
-//     [data.name]
-    //   );
-  const avatarUrl =
-    "https://40ar4rk0hv.ufs.sh/f/9Pu2ZyQIW8BFkxw2CxtHqGNu7tCzy62FwhZjiv9UlmR30p15";
 
   // Derive current company safely
   const currentCompany = data.experience?.[0]?.company ?? "Freelance";
@@ -77,11 +64,14 @@ export const Hero: React.FC<HeroProps> = ({ data }) => {
         </div>
 
         <div className="relative shrink-0 self-start sm:self-center">
-          <div className="w-24 h-24 sm:w-32 sm:h-32 rounded-2xl overflow-hidden border-2 border-white dark:border-zinc-800 shadow-lg rotate-3 transition-transform hover:rotate-0 duration-300 bg-white dark:bg-zinc-900">
-            <img
-              src={avatarUrl}
+          <div className="relative w-24 h-24 sm:w-32 sm:h-32 rounded-2xl overflow-hidden border-2 border-white dark:border-zinc-800 shadow-lg rotate-3 transition-transform hover:rotate-0 duration-300 bg-white dark:bg-zinc-900">
+            <Image
+              src={data.avatar}
               alt={data.name}
-              className="w-full h-full object-cover"
+              fill
+              className="object-cover"
+              sizes="(max-width: 640px) 96px, 128px"
+              priority
             />
           </div>
           <div className="absolute -bottom-2 -right-2 bg-white dark:bg-zinc-900 text-[10px] font-medium px-2 py-1 rounded-full border border-zinc-200 dark:border-zinc-800 shadow-sm flex items-center gap-1.5">
@@ -102,7 +92,7 @@ export const Hero: React.FC<HeroProps> = ({ data }) => {
         <div className="border border-gray-200 dark:border-zinc-800 rounded-lg p-5 space-y-3 bg-white/50 dark:bg-zinc-900/50">
           <div className="flex items-center gap-3 overflow-hidden">
             <Terminal className="w-4 h-4 text-zinc-400 shrink-0" />
-                      
+
             <span className="truncate">
               {data.title} @ {currentCompany}
             </span>
