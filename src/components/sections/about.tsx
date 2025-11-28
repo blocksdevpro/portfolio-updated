@@ -35,9 +35,7 @@ export const About: React.FC<AboutProps> = ({ data }) => {
   }, []);
 
   return (
-    <section
-          className="space-y-4 animate-fade-in delay-300"
-    >
+    <section className="space-y-4 animate-fade-in delay-300">
       <h2 className="text-xl font-bold text-zinc-900 dark:text-white">About</h2>
       <div className="prose dark:prose-invert text-sm text-zinc-600 dark:text-zinc-400 leading-relaxed">
         <p>{data.summary}</p>
