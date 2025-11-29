@@ -36,14 +36,14 @@ export const About: React.FC<AboutProps> = ({ data }) => {
 
   return (
     <section className="space-y-4 animate-fade-in delay-300">
-      <h2 className="text-xl font-bold text-zinc-900 dark:text-white">About</h2>
-      <div className="prose dark:prose-invert text-sm text-zinc-600 dark:text-zinc-400 leading-relaxed">
+      <h2 className="text-xl font-bold text-foreground">About</h2>
+      <div className="prose dark:prose-invert text-sm text-muted-foreground leading-relaxed">
         <p>{data.summary}</p>
       </div>
 
       {/* Mock Contribution Graph */}
       <div className="mt-6 select-none">
-        <div className="flex justify-between items-end mb-2 text-xs text-gray-400">
+        <div className="flex justify-between items-end mb-2 text-xs text-muted-foreground">
           <span>Backend activity in 2024</span>
           <div className="flex items-center gap-1">
             <span>Less</span>

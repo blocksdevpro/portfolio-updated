@@ -11,10 +11,10 @@ export const Header: React.FC = () => {
       </div>
 
       <div className="flex items-center gap-4 text-sm text-muted-foreground font-medium">
-        <a href="#projects" className="hover:text-primary transition-colors">
+        <a href="#projects" className="hover:text-primary">
           Projects
         </a>
-        <a href="#experience" className="hover:text-primary transition-colors">
+        <a href="#experience" className="hover:text-primary">
           Experience
         </a>
         <ModeSwitcher />

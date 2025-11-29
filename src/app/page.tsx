@@ -1,6 +1,7 @@
 "use client";
 
 import { About } from "@/components/sections/about";
+import { Experience } from "@/components/sections/experience";
 import { Header } from "@/components/sections/header";
 import { Hero } from "@/components/sections/hero";
 import { Socials } from "@/components/sections/socials";
@@ -19,6 +20,7 @@ export default function Home() {
         <Socials socials={RESUME_DATA.socials} />
         <About data={RESUME_DATA} />
         <TechStack skills={RESUME_DATA.skills} />
+        <Experience experience={RESUME_DATA.experience} />
       </main>
     </>
   );
