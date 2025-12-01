@@ -1,9 +1,12 @@
 "use client";
 
 import { About } from "@/components/sections/about";
+import { Education } from "@/components/sections/education";
 import { Experience } from "@/components/sections/experience";
+import { Footer } from "@/components/sections/footer";
 import { Header } from "@/components/sections/header";
 import { Hero } from "@/components/sections/hero";
+import { Projects } from "@/components/sections/projects";
 import { Socials } from "@/components/sections/socials";
 import { TechStack } from "@/components/sections/tech-stack";
 import { RESUME_DATA } from "@/constants/resume";
@@ -21,6 +24,12 @@ export default function Home() {
         <About data={RESUME_DATA} />
         <TechStack skills={RESUME_DATA.skills} />
         <Experience experience={RESUME_DATA.experience} />
+        <Projects projects={RESUME_DATA.projects} />
+        <Education
+          education={RESUME_DATA.education}
+          languages={RESUME_DATA.languages}
+        />
+        <Footer data={RESUME_DATA} />
       </main>
     </>
   );

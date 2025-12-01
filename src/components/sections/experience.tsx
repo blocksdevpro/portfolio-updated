@@ -14,16 +14,16 @@ export const Experience: React.FC<ExperienceProps> = ({ experience }) => {
         {experience.map((job, index) => (
           <div key={index} className="relative pl-8 group">
             {/* fix the blue group hover effect! */}
-            <div className="absolute -left-[6px] top-1 h-2.5 w-2.5 rounded-full bg-zinc-300 dark:bg-muted ring-3 ring-background group-hover:bg-blue-500 transition-colors"></div>
+            <div className="absolute -left-[6px] top-[2px] h-2.5 w-2.5 rounded-full bg-zinc-300  dark:bg-muted ring-4 ring-background group-hover:bg-blue-500 dark:group-hover:bg-blue-500 transition-colors"></div>
             <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-2">
               <h3 className="font-semibold text-foreground">{job.title}</h3>
               <span className="text-xs text-muted-foreground font-mono bg-muted px-2 py-1 rounded">
                 {job.period}
               </span>
             </div>
-            <div className="text-sm text-foreground/70 mb-2 font-medium">
+            <div className="text-sm text-muted-foreground mb-2 font-semibold">
               {job.company}{" "}
-              <span className="text-muted-foreground/70 font-normal">
+              <span className="text-muted-foreground font-normal">
                 • {job.description}
               </span>
             </div>

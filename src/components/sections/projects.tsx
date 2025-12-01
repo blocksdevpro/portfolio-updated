@@ -8,16 +8,10 @@ interface ProjectsProps {
 
 export const Projects: React.FC<ProjectsProps> = ({ projects }) => {
   return (
-    <section
-      id="projects"
-      className="space-y-6 animate-fade-in"
-      style={{ animationDelay: "0.5s" }}
-    >
+    <section id="projects" className="space-y-6 animate-fade-in delay-600">
       <div className="flex items-center gap-2">
-        <h2 className="text-xl font-bold text-zinc-900 dark:text-white">
-          Projects
-        </h2>
-        <span className="text-xs bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400 px-2 py-0.5 rounded-full">
+        <h2 className="text-xl font-bold text-foreground">Projects</h2>
+        <span className="text-xs bg-muted text-muted-foreground px-2 py-0.5 rounded-full">
           {projects.length}
         </span>
       </div>
@@ -26,27 +20,27 @@ export const Projects: React.FC<ProjectsProps> = ({ projects }) => {
         {projects.map((project, index) => (
           <div
             key={index}
-            className="group border border-gray-200 dark:border-gray-800 rounded-xl p-5 hover:bg-gray-50 dark:hover:bg-zinc-900 transition-all"
+            className="group border rounded-xl p-5 hover:bg-muted/40 transition-all"
           >
             <div className="flex justify-between items-start mb-2">
               <div>
-                <h3 className="font-semibold text-zinc-900 dark:text-white group-hover:text-blue-600">
+                <h3 className="font-semibold text-foreground group-hover:text-blue-600">
                   {project.title}
                 </h3>
-                <p className="text-xs text-zinc-400 font-mono mt-0.5">
+                <p className="text-xs text-muted-foreground font-mono mt-0.5">
                   {project.date}
                 </p>
               </div>
               <div className="flex gap-2">
                 {project.link && project.link !== "#" && (
                   <a href={project.link} target="_blank" rel="noreferrer">
-                    <Link className="w-4 h-4 text-gray-400 hover:text-black dark:hover:text-white" />
+                    <Link className="w-4 h-4 text-muted-foreground hover:text-foreground" />
                   </a>
                 )}
               </div>
             </div>
 
-            <p className="text-sm text-zinc-600 dark:text-zinc-400 mt-2 mb-4 leading-relaxed">
+            <p className="text-sm text-muted-foreground mt-2 mb-4 leading-relaxed">
               {project.description}
             </p>
 
@@ -54,7 +48,7 @@ export const Projects: React.FC<ProjectsProps> = ({ projects }) => {
               {project.tech.map((t) => (
                 <span
                   key={t}
-                  className="flex items-center text-[10px] font-mono bg-zinc-100 dark:bg-zinc-800 px-2 py-1 rounded text-zinc-600 dark:text-zinc-300 border border-transparent dark:border-zinc-700"
+                  className="flex items-center text-[10px] font-mono bg-muted px-2 py-1 rounded text-muted-foreground border border-transparent dark:border-zinc-700"
                 >
                   {t}
                 </span>
@@ -68,7 +62,7 @@ export const Projects: React.FC<ProjectsProps> = ({ projects }) => {
         This button is decorative since we only have one project from the resume, 
         but kept for visual fidelity to the template requested 
       */}
-      <button className="w-full py-2 text-xs font-medium text-zinc-500 hover:text-zinc-900 dark:hover:text-white border border-dashed border-gray-300 dark:border-gray-700 rounded-lg hover:bg-gray-50 dark:hover:bg-zinc-900 transition-colors flex items-center justify-center">
+      <button className="w-full py-2 text-xs font-medium text-muted-foreground hover:text-foreground border border-dashed border-gray-300 dark:border-gray-700 rounded-lg hover:bg-gray-50 dark:hover:bg-zinc-900 transition-colors flex items-center justify-center">
         Show More Projects <ChevronDown className="w-3 h-3 ml-1" />
       </button>
     </section>

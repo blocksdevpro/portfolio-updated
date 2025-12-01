@@ -53,7 +53,7 @@ export const RESUME_DATA: ResumeData = {
         "A fully automated Crypto Deposit & Webhook System built to solve limitations of existing gateways. Supports TRX and TRC-20 tokens with complete flexibility.",
       tech: ["FastAPI", "Blockchain", "Tron/TRC-20", "Webhooks", "Redis"],
       date: "Feb 2022 – Nov 2023",
-      link: "#",
+      link: "https://github.com/uttamkumbhakar/tron-payments-api",
     },
   ],
   education: [
