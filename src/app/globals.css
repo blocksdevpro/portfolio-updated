@@ -129,6 +129,10 @@
   * {
     @apply border-border outline-ring/50;
   }
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 2rem;
+  }
   body {
     @apply bg-background text-foreground;
     @apply transition-colors duration-200 ease-out;
@@ -149,4 +153,13 @@
 }
 .dark ::-webkit-scrollbar-thumb {
   background: #374151;
+}
+
+/* Hide Scrollbar Utility */
+.scrollbar-hide {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+.scrollbar-hide::-webkit-scrollbar {
+  display: none; /* Chrome, Safari and Opera */
 }

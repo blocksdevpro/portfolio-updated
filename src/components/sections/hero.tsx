@@ -40,7 +40,7 @@ export const Hero: React.FC<HeroProps> = ({ data }) => {
   }, []);
 
   // Derive current company safely
-  const currentCompany = data.experience?.[0]?.company ?? "Freelance";
+  const currentCompany = "";
 
   return (
     <section className="animate-fade-in space-y-8 delay-100">

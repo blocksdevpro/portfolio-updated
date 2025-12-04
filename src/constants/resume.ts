@@ -14,8 +14,8 @@ export const RESUME_DATA: ResumeData = {
   pronouns: "he/him",
   socials: {
     website: "https://blocksdev.pro",
-    github: "https://github.com/uttamkumbhakar",
-    linkedin: "https://linkedin.com/in/uttamkumbhakar",
+    github: "https://github.com/blocksdevpro",
+    linkedin: "https://www.linkedin.com/in/uttam-kumbhakar/",
   },
   skills: [
     "FastAPI",
@@ -53,7 +53,6 @@ export const RESUME_DATA: ResumeData = {
         "A fully automated Crypto Deposit & Webhook System built to solve limitations of existing gateways. Supports TRX and TRC-20 tokens with complete flexibility.",
       tech: ["FastAPI", "Blockchain", "Tron/TRC-20", "Webhooks", "Redis"],
       date: "Feb 2022 – Nov 2023",
-      link: "https://github.com/uttamkumbhakar/tron-payments-api",
     },
   ],
   education: [
@@ -64,7 +63,7 @@ export const RESUME_DATA: ResumeData = {
     },
   ],
   languages: [
-    { language: "Hindi", level: "Native" },
     { language: "English", level: "Basic" },
+    { language: "Hindi", level: "Native" },
   ],
 };
