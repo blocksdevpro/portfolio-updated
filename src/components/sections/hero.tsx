@@ -92,7 +92,7 @@ export const Hero: React.FC<HeroProps> = ({ data }) => {
             <Terminal className="w-4 h-4 shrink-0" />
 
             <span className="truncate">
-              {data.title} @ {currentCompany}
+              {data.title}
             </span>
           </div>
           <div className="flex items-center gap-3">
