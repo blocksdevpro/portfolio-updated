@@ -156,9 +156,11 @@ export const About: React.FC<AboutProps> = ({ data }) => {
                             className={`absolute ${
                               j === 0 ? "top-full mt-2" : "bottom-full mb-2"
                             } hidden group-hover:block z-100 pointer-events-none ${
-                              i > 40
-                                ? "right-0 translate-x-0"
-                                : "left-1/2 -translate-x-1/2"
+                              i < 10
+                                ? "left-0 translate-x-0"
+                                : i > 40
+                                  ? "right-0 translate-x-0"
+                                  : "left-1/2 -translate-x-1/2"
                             }`}
                           >
                             <div className="bg-white text-black text-[10px] px-2 py-1 rounded border border-border shadow-xl whitespace-nowrap font-medium">
@@ -171,9 +173,11 @@ export const About: React.FC<AboutProps> = ({ data }) => {
                                   ? "bottom-full border-b-white border-t-transparent"
                                   : "top-full border-t-white border-b-transparent"
                               } border-4 border-transparent ${
-                                i > 40
-                                  ? "right-1 translate-x-0"
-                                  : "left-1/2 -translate-x-1/2"
+                                i < 10
+                                  ? "left-1 translate-x-0"
+                                  : i > 40
+                                    ? "right-1 translate-x-0"
+                                    : "left-1/2 -translate-x-1/2"
                               }`}
                             ></div>
                           </div>
