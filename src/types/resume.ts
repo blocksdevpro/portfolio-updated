@@ -8,13 +8,19 @@ export interface Experience {
 
 export interface Project {
   title: string;
+  date: string;
   description: string;
   tech: string[];
-  date: string;
+  icon?: string; // NEW: emoji or text icon
   links?: {
     production?: string;
     github?: string;
   };
+  metrics?: Array<{ label: string; value: string }>;
+  highlights?: string[];
+  architecture?: string;
+  features?: string[];
+  challenges?: string;
 }
 
 export interface Education {
