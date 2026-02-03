@@ -1,5 +1,5 @@
 import React from "react";
-import { ArrowUpRight, Github, Linkedin, Globe } from "lucide-react";
+import { ArrowUpRight, Github, Linkedin, Globe, Twitter } from "lucide-react";
 import { ResumeData } from "@/types/resume";
 
 interface SocialsProps {
@@ -14,7 +14,7 @@ export const Socials: React.FC<SocialsProps> = ({ socials }) => {
           href={socials.github}
           target="_blank"
           rel="noreferrer"
-          className="flex items-center gap-2 p-2 text-muted-foreground hover:text-accent-foreground hover:bg-primary-foreground border rounded-md group"
+          className="flex items-center gap-2 p-2 text-muted-foreground hover:text-accent-foreground hover:bg-primary-foreground border rounded-md group transition-all duration-200"
         >
           <Github className="w-4 h-4" />
           <span className="text-xs font-medium group-hover:underline underline-offset-4">
@@ -28,11 +28,25 @@ export const Socials: React.FC<SocialsProps> = ({ socials }) => {
           href={socials.linkedin}
           target="_blank"
           rel="noreferrer"
-          className="flex items-center gap-2 p-2 border rounded-md text-muted-foreground hover:text-accent-foreground hover:bg-primary-foreground group"
+          className="flex items-center gap-2 p-2 border rounded-md text-muted-foreground hover:text-accent-foreground hover:bg-primary-foreground group transition-all duration-200"
         >
           <Linkedin className="w-4 h-4 group-hover:text-blue-600" />
           <span className="text-xs font-medium group-hover:underline underline-offset-4">
             LinkedIn
+          </span>
+          <ArrowUpRight className="w-3 h-3 ml-auto group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+        </a>
+      )}
+      {socials.twitter && (
+        <a
+          href={socials.twitter}
+          target="_blank"
+          rel="noreferrer"
+          className="flex items-center gap-2 p-2 border rounded-md text-muted-foreground hover:text-accent-foreground hover:bg-primary-foreground group transition-all duration-200"
+        >
+          <Twitter className="w-4 h-4 group-hover:text-blue-600" />
+          <span className="text-xs font-medium group-hover:underline underline-offset-4">
+            Twitter
           </span>
           <ArrowUpRight className="w-3 h-3 ml-auto group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
         </a>
@@ -42,7 +56,7 @@ export const Socials: React.FC<SocialsProps> = ({ socials }) => {
           href={socials.website}
           target="_blank"
           rel="noreferrer"
-          className="flex items-center gap-2 p-2 border rounded-md text-muted-foreground hover:text-accent-foreground hover:bg-primary-foreground group"
+          className="flex items-center gap-2 p-2 border rounded-md text-muted-foreground hover:text-accent-foreground hover:bg-primary-foreground group transition-all duration-200"
         >
           <Globe className="w-4 h-4 group-hover:text-green-500" />
           <span className="text-xs font-medium group-hover:underline underline-offset-4">

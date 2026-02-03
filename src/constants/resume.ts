@@ -16,6 +16,7 @@ export const RESUME_DATA: ResumeData = {
     website: "https://blocksdev.pro",
     github: "https://github.com/blocksdevpro",
     linkedin: "https://www.linkedin.com/in/uttam-kumbhakar/",
+    twitter: "https://x.com/blocksdevpro",
   },
   skills: [
     "FastAPI",
@@ -47,6 +48,26 @@ export const RESUME_DATA: ResumeData = {
     },
   ],
   projects: [
+    {
+      title: "FastQ | Lightweight Background Task Library",
+      description:
+        "Production-ready background task library for FastAPI with Redis/Memory backends, smart retry logic, and distributed worker support. Built following SOLID principles with ~500 LOC.",
+      tech: ["Python", "Redis", "Async/Await", "Task Queue"],
+      date: "Feb 2026 - Present",
+      links: {
+        github: "https://github.com/blocksdevpro/fastq",
+      },
+    },
+    {
+      title: "Calorine | AI Nutrition Tracker",
+      description:
+        "Snap photos of meals and get instant nutritional breakdowns. AI-powered platform converting visual data into macro feedback with smart journaling and analytics. Helps users achieve dietary goals without manual entry.",
+      tech: ["NextJS", "FastAPI", "Postgres", "OpenAI"],
+      date: "Feb 2026 - Present",
+      links: {
+        production: "https://calorine.in",
+      },
+    },
     {
       title: "Tron Payments API",
       description:

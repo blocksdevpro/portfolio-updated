@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import { Link, ChevronDown, ChevronUp } from "lucide-react";
+import { ChevronDown, ChevronUp, ExternalLink, GithubIcon } from "lucide-react";
 import { ResumeData } from "@/types/resume";
 
 interface ProjectsProps {
@@ -23,9 +23,14 @@ const ProjectCard = ({ project }: { project: ResumeData["projects"][0] }) => {
           </p>
         </div>
         <div className="flex gap-2">
-          {project.link && project.link !== "#" && (
-            <a href={project.link} target="_blank" rel="noreferrer">
-              <Link className="w-4 h-4 text-muted-foreground hover:text-foreground" />
+          {project.links && project.links.production && (
+            <a href={project.links.production} target="_blank" rel="noreferrer">
+              <ExternalLink className="w-4 h-4 text-muted-foreground hover:text-foreground" />
+            </a>
+          )}
+          {project.links && project.links.github && (
+            <a href={project.links.github} target="_blank" rel="noreferrer">
+              <GithubIcon className="w-4 h-4 text-muted-foreground hover:text-foreground" />
             </a>
           )}
         </div>

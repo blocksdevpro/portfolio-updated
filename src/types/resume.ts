@@ -10,8 +10,11 @@ export interface Project {
   title: string;
   description: string;
   tech: string[];
-  link?: string;
   date: string;
+  links?: {
+    production?: string;
+    github?: string;
+  };
 }
 
 export interface Education {
