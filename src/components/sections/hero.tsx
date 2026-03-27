@@ -57,9 +57,8 @@ export const Hero: React.FC<HeroProps> = ({ data }) => {
             </p>
           </div>
 
-          <p className="text-muted-foreground leading-relaxed max-w-lg">
-            Building scalable backend systems and secure APIs with clean code
-            and attention to detail.
+          <p className="text-muted-foreground leading-relaxed max-w-lg text-lg">
+            {data.description}
           </p>
         </div>
 

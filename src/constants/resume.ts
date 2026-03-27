@@ -2,7 +2,8 @@ import { ResumeData } from "@/types/resume";
 
 export const RESUME_DATA: ResumeData = {
   name: "Uttam Kumbhakar",
-  title: "Junior Backend Developer",
+  title: "Python Backend Engineer",
+  description: "Real-time systems · Automation · 100+ shipped projects",
   avatar:
     "https://40ar4rk0hv.ufs.sh/f/9Pu2ZyQIW8BFkxw2CxtHqGNu7tCzy62FwhZjiv9UlmR30p15",
 
@@ -10,7 +11,7 @@ export const RESUME_DATA: ResumeData = {
   email: "mail@blocksdev.pro",
   website: "https://blocksdev.pro",
   summary:
-    "Junior Backend Developer with hands-on experience building and deploying scalable APIs using FastAPI and NestJS. Skilled in authentication systems, PostgreSQL database design, and integrating third-party APIs like Pipedrive. Worked as part of a 4-person engineering team, contributing to a multi-tenant sales portal and deploying services on DigitalOcean. Passionate about backend engineering, automation, and continuously improving technical skills.",
+    "Self-taught Python backend engineer with 3+ years of experience delivering 100+ projects for international clients across APIs, automation systems, bots, scrapers, AI integrations, and payment processing. Earned ₹60L+ in freelance revenue working with clients across the US, Europe, and Southeast Asia. Currently building FastQ and learning Rust. Looking for a full-time remote backend role.",
   pronouns: "he/him",
   socials: {
     website: "https://blocksdev.pro",
@@ -19,69 +20,75 @@ export const RESUME_DATA: ResumeData = {
     twitter: "https://x.com/blocksdev_pro",
   },
   skills: [
-    "FastAPI",
-    "NestJS",
-    "PostgreSQL",
-    "JWT & OAuth 2.0",
-    "API Development",
-    "DigitalOcean",
-    "Backend Engineering",
-    "Web3",
-    "Docker",
-    "Git",
-  ],
-  experience: [
-    {
-      title: "Junior Backend Developer",
-      company: "Async Integrations d.o.o.",
-      period: "March 2025 – August 2025",
-      description: "Remote (Zagreb, Croatia)",
-      details: [
-        "Developed and maintained scalable REST APIs using FastAPI and NestJS.",
-        "Designed and optimized PostgreSQL schemas, queries, and migrations.",
-        "Implemented secure authentication flows including JWT and OAuth 2.0.",
-        "Integrated third-party services such as Pipedrive CRM into backend systems.",
-        "Deployed and managed backend applications on DigitalOcean infrastructure.",
-        "Built core backend modules for a multi-tenant sales portal platform.",
-        "Collaborated with a 4-person development team and participated in code reviews.",
-      ],
-    },
-  ],
+  "Python",
+  "FastAPI",
+  "PostgreSQL",
+  "AsyncIO",
+  "Redis",
+  "Docker",
+  "WebSockets",
+  "REST APIs",
+  "MongoDB",
+  "Nginx",
+  "Pytest",
+  "gRPC",
+  "Rust (learning)",
+],
+experience: [
+  {
+    title: "Freelance Backend Engineer",
+    company: "Independent Contractor",
+    period: "Jan 2022 – Present",
+    description: "Remote (International — US, Europe, SEA)",
+    details: [
+      "Delivered 100+ backend projects for international clients via Fiverr, Upwork, and direct referrals — earning ₹60L+ over 3 years.",
+      "Built REST APIs, automation pipelines, Telegram bots, web scrapers, AI/LLM integrations, and payment systems across dozens of client verticals.",
+      "Operated across the full delivery lifecycle: scoping, architecture, implementation, deployment, and post-launch support.",
+      "Maintained high client satisfaction with repeat business and long-term retainer relationships across multiple timezones.",
+    ],
+  },
+  {
+    title: "Backend Developer",
+    company: "Async Integrations d.o.o.",
+    period: "March 2025 – August 2025",
+    description: "Remote (Zagreb, Croatia)",
+    details: [
+      "Designed and implemented FastAPI microservices for a multi-tenant CRM serving real-time dashboard data.",
+      "Optimized PostgreSQL queries, reducing API response times under production load.",
+      "Implemented JWT & OAuth 2.0 authentication across backend services.",
+      "Integrated Pipedrive CRM API with retry logic and fault tolerance.",
+      "Dockerized and deployed services to DigitalOcean.",
+    ],
+  },
+],
   projects: [
     {
-      title: "FastQ | Lightweight Background Task Library",
-      date: "Feb 2026 - Present",
-      icon: "⚡",
-      description:
-        "Production-ready background task library for FastAPI with Redis/Memory backends, smart retry logic, and distributed worker support. Built following SOLID principles with ~500 LOC.",
-      metrics: [
-        { label: "LOC", value: "~500" },
-        { label: "Coverage", value: "100%" },
-        { label: "Tasks/sec", value: "1K+" },
-      ],
-      highlights: [
-        "⚡ 10x faster than Celery for simple tasks",
-        "📦 Zero dependencies in memory mode",
-        "🔄 Exponential backoff retry mechanism",
-        "📊 Real-time task monitoring & history",
-        "🐳 Docker-ready with compose setup",
-        "🎯 100% test coverage with pytest",
-      ],
-      architecture:
-        "Abstract Broker Pattern → Memory/Redis → Worker Pool (asyncio)",
-      features: [
-        "Smart retry with exponential backoff",
-        "Complete task history tracking",
-        "Distributed worker support",
-        "Memory & Redis backends",
-      ],
-      challenges:
-        "Built following SOLID principles while keeping the codebase minimal and production-ready.",
-      tech: ["Python", "Redis", "Async/Await", "Task Queue", "Docker"],
-      links: {
-        github: "https://github.com/blocksdevpro/fastq",
-      },
-    },
+  title: "Tron Payments API",
+  date: "Feb 2022 – Nov 2023",
+  icon: "💎",
+  description:
+    "Production TRON blockchain payment processor built from scratch — no third-party SDK. Achieved sub-1-second transaction detection via WebSocket event streaming, faster than Tronscan's own indexer. Ran reliably on a 2-core/4GB VPS using TronGrid's free tier through aggressive async optimization.",
+  metrics: [
+    { label: "Transactions", value: "50K+" },
+    { label: "Uptime", value: "99.9%" },
+    { label: "Confirm", value: "<1s" },
+  ],
+  highlights: [
+    "⚡ Faster than Tronscan's own indexer",
+    "🔍 Full TRC20 event log parsing",
+    "🔔 Two-phase payment confirmation",
+    "🔐 Multi-tenant wallet management",
+    "♻️ Fault-tolerant WS reconnection with missed-block recovery",
+    "🖥️ Free WebSocket API on a 2-core/4GB VPS",
+  ],
+  features: [
+    "TRX & TRC-20 token support",
+    "Unique address generation per payment",
+    "Missed-block recovery on reconnect",
+    "Gas fee optimization",
+  ],
+  tech: ["Python", "AsyncIO", "WebSockets", "MongoDB", "TronGrid API"],
+},
     {
       title: "Calorine | AI Nutrition Tracker",
       date: "Feb 2026 - Present",
@@ -111,33 +118,7 @@ export const RESUME_DATA: ResumeData = {
       links: {
         production: "https://calorine.in",
       },
-    },
-    {
-      title: "Tron Payments API",
-      date: "Feb 2022 - Nov 2023",
-      icon: "💎",
-      description:
-        "Fully automated Crypto Deposit & Webhook System built to solve limitations of existing gateways. Supports TRX and TRC-20 tokens with complete flexibility.",
-      metrics: [
-        { label: "Transactions", value: "50K+" },
-        { label: "Uptime", value: "99.9%" },
-        { label: "Confirm", value: "<1s" },
-      ],
-      highlights: [
-        "💸 Real-time blockchain monitoring",
-        "🔔 Instant webhook notifications",
-        "🔐 HD wallet generation (BIP39/BIP44)",
-        "⚡ Sub-second confirmation detection",
-        "📈 99.9% uptime SLA",
-      ],
-      features: [
-        "TRX & TRC-20 token support",
-        "Automatic address generation per user",
-        "Transaction history & reconciliation",
-        "Gas fee optimization",
-      ],
-      tech: ["FastAPI", "Blockchain", "Tron/TRC-20", "Webhooks", "Redis"],
-    },
+    }
     ],
   education: [
     {
@@ -147,7 +128,7 @@ export const RESUME_DATA: ResumeData = {
     },
   ],
   languages: [
-    { language: "English", level: "Basic" },
-    { language: "Hindi", level: "Native" },
-  ],
+  { language: "English", level: "Fluent" },
+  { language: "Hindi", level: "Native" },
+],
 };

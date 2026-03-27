@@ -32,6 +32,7 @@ export interface Education {
 export interface ResumeData {
   name: string;
   title: string;
+  description: string;
   avatar: string;
   location: string;
   email: string;
